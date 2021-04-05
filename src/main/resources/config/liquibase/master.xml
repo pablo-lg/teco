@@ -15,7 +15,31 @@
     <property name="datetimeType" value="datetime" dbms="oracle, mssql, postgresql, h2"/>
 
     <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210405192515_added_entity_Despliegue.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210405192516_added_entity_Segmento.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210405192517_added_entity_Tecnologia.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210405192518_added_entity_Competencia.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210405192519_added_entity_Estado.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210405192520_added_entity_NSE.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210405192521_added_entity_TipoObra.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210405192522_added_entity_Obra.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210405192523_added_entity_TipoEmp.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210405192524_added_entity_EjecCuentas.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210405192525_added_entity_Direccion.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210405192526_added_entity_Emprendimiento.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210405192527_added_entity_GrupoAlarma.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210405192528_added_entity_GrupoEmprendimiento.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210405192529_added_entity_GrupoUsuario.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210405192530_added_entity_Pauta.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210405192531_added_entity_MasterTipoEmp.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <include file="config/liquibase/changelog/20210405192521_added_entity_constraints_TipoObra.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210405192522_added_entity_constraints_Obra.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210405192523_added_entity_constraints_TipoEmp.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210405192524_added_entity_constraints_EjecCuentas.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210405192526_added_entity_constraints_Emprendimiento.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210405192527_added_entity_constraints_GrupoAlarma.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210405192530_added_entity_constraints_Pauta.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
     <!-- jhipster-needle-liquibase-add-incremental-changelog - JHipster will add incremental liquibase changelogs here -->
 </databaseChangeLog>

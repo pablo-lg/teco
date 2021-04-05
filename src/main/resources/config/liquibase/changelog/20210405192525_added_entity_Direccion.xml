@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <!--
+        Added the entity Direccion.
+    -->
+    <changeSet id="20210405192525-1" author="jhipster">
+        <createTable tableName="direccion">
+            <column name="id" type="varchar(255)">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="identification" type="varchar(255)">
+                <constraints nullable="true" unique="true" uniqueConstraintName="ux_direccion__identification" />
+            </column>
+            <column name="pais" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+            <column name="provincia" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+            <column name="partido" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+            <column name="localidad" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+            <column name="calle" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+            <column name="altura" type="bigint">
+                <constraints nullable="false" />
+            </column>
+            <column name="region" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="subregion" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="hub" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="barrios_especiales" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="codigo_postal" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="tipo_calle" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="zona_competencia" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="intersection_left" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="intersection_right" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="street_type" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="latitud" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="longitud" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="elementos_de_red" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here -->
+        </createTable>
+    </changeSet>
+
+    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here -->
+
+    <!--
+        Load sample data generated with Faker.js
+        - This data can be easily edited using a CSV editor (or even MS Excel) and
+          is located in the 'src/main/resources/config/liquibase/fake-data' directory
+        - By default this data is applied when running with the JHipster 'dev' profile.
+          This can be customized by adding or removing 'faker' in the 'spring.liquibase.contexts'
+          Spring Boot configuration key.
+    -->
+    <changeSet id="20210405192525-1-data" author="jhipster" context="faker">
+        <loadData
+                  file="config/liquibase/fake-data/direccion.csv"
+                  separator=";"
+                  tableName="direccion">
+            <column name="id" type="string"/>
+            <column name="identification" type="string"/>
+            <column name="pais" type="string"/>
+            <column name="provincia" type="string"/>
+            <column name="partido" type="string"/>
+            <column name="localidad" type="string"/>
+            <column name="calle" type="string"/>
+            <column name="altura" type="numeric"/>
+            <column name="region" type="string"/>
+            <column name="subregion" type="string"/>
+            <column name="hub" type="string"/>
+            <column name="barrios_especiales" type="string"/>
+            <column name="codigo_postal" type="string"/>
+            <column name="tipo_calle" type="string"/>
+            <column name="zona_competencia" type="string"/>
+            <column name="intersection_left" type="string"/>
+            <column name="intersection_right" type="string"/>
+            <column name="street_type" type="string"/>
+            <column name="latitud" type="string"/>
+            <column name="longitud" type="string"/>
+            <column name="elementos_de_red" type="string"/>
+            <!-- jhipster-needle-liquibase-add-loadcolumn - JHipster (and/or extensions) can add load columns here -->
+        </loadData>
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd">
+    <!--
+        Added the constraints for entity Emprendimiento.
+    -->
+    <changeSet id="20210405192526-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="grupo_emprendimiento_id"
+                                 baseTableName="emprendimiento"
+                                 constraintName="fk_emprendimie__grupo_em_61_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="grupo_emprendimiento"/>
+
+        <addForeignKeyConstraint baseColumnNames="obra_id"
+                                 baseTableName="emprendimiento"
+                                 constraintName="fk_emprendimiento__obra_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="obra"/>
+
+        <addForeignKeyConstraint baseColumnNames="tipo_obra_id"
+                                 baseTableName="emprendimiento"
+                                 constraintName="fk_emprendimie__tipo_obr_47_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tipo_obra"/>
+
+        <addForeignKeyConstraint baseColumnNames="tipo_emp_id"
+                                 baseTableName="emprendimiento"
+                                 constraintName="fk_emprendimie__tipo_emp_b1_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tipo_emp"/>
+
+        <addForeignKeyConstraint baseColumnNames="estado_id"
+                                 baseTableName="emprendimiento"
+                                 constraintName="fk_emprendimiento__estado_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="estado"/>
+
+        <addForeignKeyConstraint baseColumnNames="competencia_id"
+                                 baseTableName="emprendimiento"
+                                 constraintName="fk_emprendimie__competen_e0_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="competencia"/>
+
+        <addForeignKeyConstraint baseColumnNames="despliegue_id"
+                                 baseTableName="emprendimiento"
+                                 constraintName="fk_emprendimie__desplieg_23_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="despliegue"/>
+
+        <addForeignKeyConstraint baseColumnNames="nse_id"
+                                 baseTableName="emprendimiento"
+                                 constraintName="fk_emprendimiento__nse_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="nse"/>
+
+        <addForeignKeyConstraint baseColumnNames="segmento_id"
+                                 baseTableName="emprendimiento"
+                                 constraintName="fk_emprendimie__segmento_56_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="segmento"/>
+
+        <addForeignKeyConstraint baseColumnNames="tecnologia_id"
+                                 baseTableName="emprendimiento"
+                                 constraintName="fk_emprendimie__tecnolog_00_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tecnologia"/>
+
+        <addForeignKeyConstraint baseColumnNames="ejec_cuentas_id"
+                                 baseTableName="emprendimiento"
+                                 constraintName="fk_emprendimie__ejec_cue_df_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="ejec_cuentas"/>
+
+        <addForeignKeyConstraint baseColumnNames="direccion_id"
+                                 baseTableName="emprendimiento"
+                                 constraintName="fk_emprendimie__direccio_ec_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="direccion"/>
+    </changeSet>
+</databaseChangeLog>
