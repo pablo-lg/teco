@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd">
+    <!--
+        Added the constraints for entity TipoEmp.
+    -->
+    <changeSet id="20210405192523-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="master_tipo_emp_id"
+                                 baseTableName="tipo_emp"
+                                 constraintName="fk_tipo_emp__master_tipo_89_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="master_tipo_emp"/>
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,250 @@
+{
+  "name": "Emprendimiento",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "nombre",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "contacto",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "fechaFinObra",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "elementosDeRed",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "clientesCatv",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "clientesFibertel",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "clientesFibertelLite",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "clientesFlow",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "clientesCombo",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lineasVoz",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "mesesDeFinalizado",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "altasBC",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "penetracionVivLot",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "penetracionBC",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "demanda1",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "demanda2",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "demanda3",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "demanda4",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lotes",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "viviendas",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "comProf",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "habitaciones",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "manzanas",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "demanda",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "fechaDeRelevamiento",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "telefono",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "anoPriorizacion",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "contratoOpen",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "negociacion",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "estadoBC",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "fecha",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "codigoDeFirma",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "fechaFirma",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "observaciones",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "comentario",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "estadoFirma",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "grupoEmprendimiento",
+      "otherEntityRelationshipName": "emprendimiento",
+      "relationshipName": "grupoEmprendimiento",
+      "otherEntityField": "descripcion"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "obra",
+      "otherEntityRelationshipName": "emprendimiento",
+      "relationshipName": "obra",
+      "otherEntityField": "descripcion"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "tipoObra",
+      "otherEntityRelationshipName": "emprendimiento",
+      "relationshipName": "tipoObra",
+      "otherEntityField": "descripcion"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "tipoEmp",
+      "otherEntityRelationshipName": "emprendimiento",
+      "relationshipName": "tipoEmp",
+      "otherEntityField": "descripcion"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "estado",
+      "otherEntityRelationshipName": "emprendimiento",
+      "relationshipName": "estado",
+      "otherEntityField": "descripcion"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "competencia",
+      "otherEntityRelationshipName": "emprendimiento",
+      "relationshipName": "competencia",
+      "otherEntityField": "descripcion"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "despliegue",
+      "otherEntityRelationshipName": "emprendimiento",
+      "relationshipName": "despliegue",
+      "otherEntityField": "descripcion"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "nSE",
+      "otherEntityRelationshipName": "emprendimiento",
+      "relationshipName": "nSE",
+      "otherEntityField": "descripcion"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "segmento",
+      "otherEntityRelationshipName": "emprendimiento",
+      "relationshipName": "segmento",
+      "otherEntityField": "descripcion"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "tecnologia",
+      "otherEntityRelationshipName": "emprendimiento",
+      "relationshipName": "tecnologia",
+      "otherEntityField": "descripcion"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "ejecCuentas",
+      "otherEntityRelationshipName": "emprendimiento",
+      "relationshipName": "ejecCuentas",
+      "otherEntityField": "nombre"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "direccion",
+      "otherEntityRelationshipName": "emprendimiento",
+      "relationshipName": "direccion",
+      "otherEntityField": "calle"
+    }
+  ],
+  "entityTableName": "emprendimiento",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "changelogDate": "20210405192526"
+}

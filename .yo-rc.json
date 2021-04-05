@@ -42,7 +42,27 @@
     "jwtSecretKey": "MjZiNTI5NWE4Y2Q2ZWZkODNmMzg0ZWNiOTFmZmI3Mjk5NGUwZThjNWRiZjczNGNkNjNjMmFjYzgzNjlhNzQxYjNhNDYyM2Q3Mjk4OGFkZWQwODI5OGE5NTI4MmZmZmFhZjNmMjNhOGFiYmRkMjNiOWUwYWNmNjg2ZGFiZjE5YWY=",
     "clientTheme": "none",
     "clientThemeVariant": "",
-    "reactive": false
+    "reactive": false,
+    "entities": [
+      "Despliegue",
+      "Segmento",
+      "Tecnologia",
+      "Competencia",
+      "Estado",
+      "NSE",
+      "TipoObra",
+      "Obra",
+      "TipoEmp",
+      "EjecCuentas",
+      "Direccion",
+      "Emprendimiento",
+      "GrupoAlarma",
+      "GrupoEmprendimiento",
+      "GrupoUsuario",
+      "Pauta",
+      "MasterTipoEmp"
+    ],
+    "lastLiquibaseTimestamp": 1617650731000
   },
   "git-provider": "GitHub",
   "git-company": "pablo-lg",

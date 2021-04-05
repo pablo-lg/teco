@@ -1,0 +1,41 @@
+{
+  "name": "Obra",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "descripcion",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "habilitada",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "fechaFinObra",
+      "fieldType": "LocalDate"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "tipoObra",
+      "otherEntityRelationshipName": "obra",
+      "relationshipName": "tipoObra",
+      "otherEntityField": "descripcion"
+    }
+  ],
+  "entityTableName": "obra",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "changelogDate": "20210405192522"
+}

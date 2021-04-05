@@ -1,0 +1,200 @@
+
+entity Despliegue {
+  Id  Long required,
+  descripcion  String,
+  valor String
+}
+
+entity Segmento {
+  Id  Long required,
+  descripcion String
+}
+
+entity Tecnologia {
+  Id  Long required,
+  descripcion String
+}
+
+entity Competencia {
+  Id  Long required,
+  descripcion String
+}
+
+entity Estado {
+  Id  Long required,
+  descripcion String
+}
+
+entity NSE {
+  Id  Long required,
+  descripcion String,
+  activo Boolean,
+}
+
+entity TipoObra {
+  Id  Long required,
+  descripcion String
+}
+
+entity Obra {
+  Id Long required,
+  descripcion String,
+  habilitada Boolean,
+  fechaFinObra LocalDate,
+}
+
+entity TipoEmp {
+  Id  Long required,
+  descripcion  String
+  valor String
+}
+
+entity EjecCuentas {
+  Id  Long required,
+  telefono String,
+  apellido String,
+  celular String,
+  mail String,
+  nombre String,
+  repcom1 String,
+  repcom2 String,
+
+}
+
+entity Direccion {
+  Id String required,
+  identification String unique,
+  pais String required,
+  provincia String required,
+  partido String required,
+  localidad String required,
+  calle String required,
+  altura Long required,
+  region String,
+  subregion String,
+  hub String,
+  barriosEspeciales String,
+  codigoPostal String,
+  tipoCalle String,
+  zonaCompetencia String,
+  intersectionLeft String,
+  intersectionRight String,
+  streetType String,
+  latitud String,
+  longitud String,
+  elementosDeRed String,
+  
+  
+}
+
+entity Emprendimiento {
+  Id Long required,
+  nombre String,
+  contacto String,
+  fechaFinObra LocalDate,
+  elementosDeRed String,
+  clientesCatv String,
+  clientesFibertel String,
+  clientesFibertelLite String,
+  clientesFlow String,
+  clientesCombo String,
+  lineasVoz String,
+  mesesDeFinalizado String,
+  altasBC String,
+  penetracionVivLot String,
+  penetracionBC String,
+  demanda1 String,
+  demanda2 String,
+  demanda3 String,
+  demanda4 String,
+  lotes String,
+  viviendas String,
+  comProf String,
+  habitaciones String,
+  manzanas String,
+  demanda String,
+  fechaDeRelevamiento LocalDate,
+  telefono String,
+  anoPriorizacion LocalDate,
+  contratoOpen String,
+  negociacion Boolean,
+  estadoBC String,
+  fecha LocalDate,
+  codigoDeFirma String,
+  fechaFirma LocalDate,
+  observaciones String,
+  comentario String,
+  estadoFirma String,
+}
+
+entity GrupoAlarma {
+  Id Long required,
+  nombreGrupo String required,
+  alarmaTiempo Long,
+  alarmaSva Long,
+  alarmaBusinesscase Long,
+}
+
+entity GrupoEmprendimiento {
+ Id Long required,
+ descripcion String,
+ esProtegido Boolean,
+}
+
+entity GrupoUsuario {
+ Id Long required,
+ usuario String,
+}
+
+entity Pauta {
+ Id Long required,
+ anios Long,
+ tipoPauta String,
+}
+
+entity MasterTipoEmp {
+ Id Long required,
+ descripcion String,
+ sobreLote String,
+ sobreVivienda String,
+}
+
+relationship ManyToOne {
+	TipoEmp{masterTipoEmp} to MasterTipoEmp
+    Pauta{masterTipoEmp} to MasterTipoEmp
+	GrupoAlarma{GrupoEmprendimiento(descripcion)} to GrupoEmprendimiento
+  	GrupoAlarma{GrupoUsuario(usuario)} to GrupoUsuario
+	TipoObra{Segmento(descripcion)} to Segmento,
+	EjecCuentas{Segmento(descripcion)} to Segmento,
+    Emprendimiento{GrupoEmprendimiento(descripcion)} to GrupoEmprendimiento
+    Emprendimiento{Obra(descripcion)} to Obra,
+    Emprendimiento{TipoObra(descripcion)} to TipoObra,
+    Emprendimiento{TipoEmp(descripcion)} to TipoEmp,
+    Emprendimiento{Estado(descripcion)} to Estado,
+    Emprendimiento{Competencia(descripcion)} to Competencia,
+    Emprendimiento{Despliegue(descripcion)} to Despliegue,
+    Emprendimiento{NSE(descripcion)} to NSE,
+    Emprendimiento{Segmento(descripcion)} to Segmento,
+    Emprendimiento{Tecnologia(descripcion)} to Tecnologia,
+    Emprendimiento{EjecCuentas(nombre)} to EjecCuentas,
+    Emprendimiento{Direccion(calle)} to Direccion,
+
+
+
+    
+}
+
+relationship ManyToOne {
+	Obra{TipoObra(descripcion)} to TipoObra
+}
+
+
+
+
+
+// Set pagination options
+
+ 
+
+
+// angularSuffix * with mySuffi

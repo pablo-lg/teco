@@ -1,0 +1,53 @@
+{
+  "name": "GrupoAlarma",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "nombreGrupo",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "alarmaTiempo",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "alarmaSva",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "alarmaBusinesscase",
+      "fieldType": "Long"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "grupoEmprendimiento",
+      "otherEntityRelationshipName": "grupoAlarma",
+      "relationshipName": "grupoEmprendimiento",
+      "otherEntityField": "descripcion"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "grupoUsuario",
+      "otherEntityRelationshipName": "grupoAlarma",
+      "relationshipName": "grupoUsuario",
+      "otherEntityField": "usuario"
+    }
+  ],
+  "entityTableName": "grupo_alarma",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "changelogDate": "20210405192527"
+}

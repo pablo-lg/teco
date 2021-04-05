@@ -1,0 +1,108 @@
+{
+  "name": "Direccion",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "identification",
+      "fieldType": "String",
+      "fieldValidateRules": ["unique"]
+    },
+    {
+      "fieldName": "pais",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "provincia",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "partido",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "localidad",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "calle",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "altura",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "region",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "subregion",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "hub",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "barriosEspeciales",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "codigoPostal",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "tipoCalle",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "zonaCompetencia",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "intersectionLeft",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "intersectionRight",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "streetType",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "latitud",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "longitud",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "elementosDeRed",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [],
+  "entityTableName": "direccion",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "changelogDate": "20210405192525"
+}

@@ -1,0 +1,33 @@
+{
+  "name": "MasterTipoEmp",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "descripcion",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "sobreLote",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "sobreVivienda",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [],
+  "entityTableName": "master_tipo_emp",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "changelogDate": "20210405192531"
+}
